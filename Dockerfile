@@ -5,6 +5,7 @@ MAINTAINER sslee <SSSSSSL@github.com> <sslee@rgblab.kr>
 
 ARG DEBIAN_FRONTEND=noninteractive
 
+EXPOSE 5760
 EXPOSE 5763
 
 SHELL ["/bin/bash", "-c"]
@@ -30,4 +31,5 @@ WORKDIR /ardupilot
 RUN /ardupilot/modules/waf/waf-light configure --board sitl
 RUN /ardupilot/modules/waf/waf-light build --target bin/arducopter
 
-CMD /ardupilot/Tools/autotest/sim_vehicle.py -v ArduCopter
+#CMD /ardupilot/Tools/autotest/sim_vehicle.py -v ArduCopter
+CMD /ardupilot/build/sitl/bin/arducopter -S -I0 --model + --speedup 1 --defaults /ardupilot/Tools/autotest/default_params/copter.parm --home 35.8925079,128.598849,0,0
