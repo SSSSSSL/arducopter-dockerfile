@@ -11,5 +11,6 @@ ardupilot의 SITL(Software in the Loop)를 도커 이미지로 배포하기 위�
                      libswscale-dev libsdl2-dev libjpeg-dev libpng-dev \
                      libtiff-dev libsmpeg-dev libopenal-dev \
                      libportmidi-dev libavresample-dev \
-                     libfreetype6-dev
+                     libfreetype6-dev \
+                     libsdl2-ttf-dev libsdl2-image-dev libsdl2-mixer-dev 
 
